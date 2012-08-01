@@ -58,7 +58,6 @@ public class SimpleFileFoodListProvider implements FoodListProvider {
 		}
 		
 		return foodList;
-		
 	}
 	
 	

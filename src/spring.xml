@@ -20,7 +20,7 @@
 	
 	<bean name="pizzaFoodRandomizerService" class="org.wiltzu.foodrandomizer.service.PizzaFoodRandomizerService">
 		<property name="foodListProvider" ref="foodListFileProvider"/>
-		<property name="taytteet" value="4"/>
+		<property name="taytteidenLKM" value="4"/>
 	</bean>
 	
 	<bean name="resourceLoaderHelper" class = "org.wiltzu.foodrandomizer.service.foodlistprovider.ResourceHelper.ResourceLoaderHelper" />

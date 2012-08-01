@@ -8,18 +8,18 @@ import org.wiltzu.foodrandomizer.service.foodlistprovider.FoodListProvider;
 public class PizzaFoodRandomizerService implements FoodRandomizerService {
 	
 	private FoodListProvider foodListProvider;
-	private int taytteet;
+	private int taytteidenLKM;
 	
 	public void setFoodListProvider (FoodListProvider fListProvider) {
 		this.foodListProvider = fListProvider;
 	}
 
 	public int getTaytteet() {
-		return taytteet;
+		return taytteidenLKM;
 	}
 
-	public void setTaytteet(int taytteet) {
-		this.taytteet = taytteet;
+	public void setTaytteidenLKM(int taytteidenLKM) {
+		this.taytteidenLKM = taytteidenLKM;
 	}
 
 	@Override
@@ -30,14 +30,14 @@ public class PizzaFoodRandomizerService implements FoodRandomizerService {
 	
 	private String randomizePizza(List<String> foodList) {
 		if(foodList.size() > 0) {
-			Random r = new Random();
+			Random r = new Random(); //randomoidaan täytteitä
 			int listLength = foodList.size();
-			StringBuilder builder = new StringBuilder();
+			StringBuilder builder = new StringBuilder(); //luodaan palautettava merkkijono
 			
-			for(int i = 1; i <= taytteet; i++) {
+			for(int i = 1; i <= taytteidenLKM; i++) {
 				int arvottu = r.nextInt(listLength);
 				builder.append(foodList.get(arvottu));
-				if(i != (taytteet)) builder.append(", ");
+				if(i != (taytteidenLKM)) builder.append(", ");
 			}
 			return builder.toString();
 			
